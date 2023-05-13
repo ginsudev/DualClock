@@ -1,0 +1,4 @@
+module dualclock2C {
+    umbrella "."
+    export *
+}

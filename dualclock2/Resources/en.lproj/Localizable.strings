@@ -1,0 +1,47 @@
+/* 
+  Localizable.strings
+  
+
+  Created by Noah Little on 6/5/2023.
+  
+*/
+
+"TWENTY_FOUR_HOUR_MODE" = "24 hour mode";
+"CUSTOM_TIME_ZONE" = "Custom time zone";
+"CLOCKS" = "Clocks";
+"TIMEZONE" = "Time zone";
+"LOCALE" = "Locale";
+"NAME_COLON" = "Name: ";
+"PRIMARY" = "Primary";
+"SECONDARY" = "Secondary";
+"ENABLED" = "Enabled";
+"MISC" = "Misc";
+"PREVIEW" = "Preview";
+"SHOW_SECONDS" = "Show seconds";
+"LOCK_SCREEN" = "Lock screen";
+"VERTICAL_OFFSET" = "Vertical offset";
+"MOVE_DUALCLOCK_UP_DOWN" = "Move DualClock up/down with a custom vertical offset.";
+"COLOR_MODE" = "COLOR_MODE";
+"COLORS" = "Colors";
+"ADAPTIVE_COLOR_DESC" = "Adaptive mode uses the lock screen wallpaper's average color to determine the best color for DualClock.";
+"COLOR" = "%@ color";
+"NAME" = "Name";
+"TIME" = "Time";
+"DATE" = "Date";
+"SECONDS" = "Seconds";
+"FONT" = "Font";
+"FONTS" = "Fonts";
+"DEFAULT" = "Default";
+"CUSTOM" = "Custom";
+"MONOSPACED" = "Monospaced";
+"ROUNDED" = "Rounded";
+"SERIF" = "Serif";
+"TIME_FORMAT" = "Time format";
+"TIME_FORMATTING" = "Time formatting";
+"DATE_FORMAT" = "Date format";
+"DATE_FORMATTING" = "Date formatting";
+"SHOW_AM_PM" = "Show AM/PM";
+"STATUS_BAR" = "Status bar";
+"SETUP_CLOCKS" = "Setup the visible clocks";
+"CONFIGURE_LS" = "Configure the lock screen clocks";
+"CONFIGURE_SB" = "Configure the status bar clocks";

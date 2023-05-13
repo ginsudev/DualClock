@@ -1,0 +1,48 @@
+/*
+  Localizable.strings
+  
+
+  Created by Noah Little on 6/5/2023.
+  
+*/
+
+"TWENTY_FOUR_HOUR_MODE" = "24小时模式";
+"CUSTOM_TIME_ZONE" = "自定义时区";
+"CLOCKS" = "时钟";
+"TIMEZONE" = "时区";
+"LOCALE" = "语言";
+"NAME_COLON" = "输入名称: ";
+"PRIMARY" = "主要";
+"SECONDARY" = "次要";
+"MISC" = "其他";
+"PREVIEW" = "预览";
+"SHOW_SECONDS" = "显示秒钟";
+"ENABLED" = "启动";
+"LOCK_SCREEN" = "锁屏";
+"VERTICAL_OFFSET" = "水平位置";
+"MOVE_DUALCLOCK_UP_DOWN" = "输入数字来把DualClock给以上下";
+"COLOR_MODE" = "颜色模式";
+"COLORS" = "颜色";
+"ADAPTIVE_COLOR_DESC" = "适应模式会根据锁屏壁纸的平均颜色自动选合适的颜色";
+"COLOR" = "%@颜色";
+"NAME" = "名称";
+"TIME" = "时间";
+"DATE" = "日期";
+"SECONDS" = "秒钟";
+"FONT" = "字体";
+"FONTS" = "字体";
+"DEFAULT" = "默认";
+"CUSTOM" = "自定义";
+"MONOSPACED" = "Monospaced";
+"ROUNDED" = "Rounded";
+"SERIF" = "Serif";
+"TIME_FORMAT" = "时间格式";
+"TIME_FORMATTING" = "时间格式";
+"DATE_FORMAT" = "日期格式";
+"DATE_FORMATTING" = "日期格式";
+"SHOW_AM_PM" = "显示AM/PM";
+"STATUS_BAR" = "状态栏";
+"SETUP_CLOCKS" = "设置时钟";
+"CONFIGURE_LS" = "调整锁屏上时间";
+"CONFIGURE_SB" = "调整状态栏里的时间";
+"ADAPTIVE" = "适应";
