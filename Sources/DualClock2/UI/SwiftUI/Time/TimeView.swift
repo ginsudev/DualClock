@@ -15,14 +15,19 @@ struct TimeView: View {
     @Environment(\.locale) var locale
     @Environment(\.isLandscape) var isLandscape
     @EnvironmentObject var localState: LocalState
-    
-    @State private var timeString = "--:--"
-    @State private var dateString = "--/--/--"
-        
-    let name: String?
-    let appearance: Settings.ClockAppearance
-    
-    private let settings = PreferenceManager.shared.settings.lockScreen
+    @StateObject private var viewModel: ViewModel
+
+    init(
+        name: String? = nil,
+        appearance: Settings.ClockAppearance
+    ) {
+        _viewModel = .init(
+            wrappedValue: .init(
+                name: name,
+                appearance: appearance
+            )
+        )
+    }
 
     var body: some View {
         Group {
@@ -32,8 +37,11 @@ struct TimeView: View {
                 portraitView
             }
         }
+        .onReceive(NotificationCenter.default.publisher(for: .NSSystemTimeZoneDidChange).prepend(.init(name: .prepended))) { _ in
+            viewModel.refresh(withTimeZone: timeZone)
+        }
         .onReceive(NotificationCenter.default.publisher(for: .refreshContent)) { _ in
-            updateStrings()
+            viewModel.updateStrings(withTimeZone: timeZone, locale: locale)
         }
     }
 }
@@ -57,50 +65,38 @@ private extension TimeView {
     }
     
     var timeView: some View {
-        Text(timeString)
+        Text(viewModel.timeString)
             .font(.system(size: 50.0, design: fontDesign))
             .foregroundColor(Color(timeColor))
     }
     
     var dateView: some View {
-        Text(dateString)
+        Text(viewModel.dateString)
             .font(.system(.body, design: fontDesign))
             .foregroundColor(Color(dateColor))
     }
     
     func titleView(isVisibleName: Bool) -> some View {
         HStack {
-            Image(systemName: appearance.iconName)
+            Image(systemName: viewModel.iconName)
                 .opacity(0.5)
             if isVisibleName {
-                Text(nameString)
+                Text(viewModel.nameString)
             }
         }
         .foregroundColor(Color(nameColor))
         .font(.system(.body, design: fontDesign))
     }
     
-    var nameString: String {
-        name ?? timeZone.placeName
-    }
-    
     var nameColor: UIColor {
-        localState.wallpaperSuitableForegroundColor ?? appearance.nameColor
+        localState.wallpaperSuitableForegroundColor ?? viewModel.appearance.nameColor
     }
     
     var timeColor: UIColor {
-        localState.wallpaperSuitableForegroundColor ?? appearance.timeColor
+        localState.wallpaperSuitableForegroundColor ?? viewModel.appearance.timeColor
     }
     
     var dateColor: UIColor {
-        localState.wallpaperSuitableForegroundColor ?? appearance.dateColor
-    }
-    
-    func updateStrings() {
-        if let timeString = settings.timeTemplate.dateString(timeZone: timeZone, locale: locale),
-           let dateString = settings.dateTemplate.dateString(timeZone: timeZone, locale: locale) {
-            self.timeString = timeString
-            self.dateString = dateString
-        }
+        localState.wallpaperSuitableForegroundColor ?? viewModel.appearance.dateColor
     }
 }

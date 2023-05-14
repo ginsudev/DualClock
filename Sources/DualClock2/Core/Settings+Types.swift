@@ -30,7 +30,6 @@ extension Settings {
         let nameColor: UIColor
         let timeColor: UIColor
         let dateColor: UIColor
-        let iconName: String
     }
     
     struct ClockInfo: Identifiable {

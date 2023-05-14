@@ -12,4 +12,10 @@ extension TimeZone {
         (identifier.components(separatedBy: "/").last ?? "Local")
             .replacingOccurrences(of: "_", with: " ")
     }
+    
+    var icon: String {
+        self.identifier == TimeZone.autoupdatingCurrent.identifier
+        ? "house.fill"
+        : "location.fill"
+    }
 }

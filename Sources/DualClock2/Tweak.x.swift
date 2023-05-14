@@ -2,7 +2,6 @@ import Orion
 import GSCore
 import DualClock2C
 
-struct Main: HookGroup {}
 struct LockScreen: HookGroup {}
 struct StatusBar: HookGroup {}
 
@@ -176,8 +175,6 @@ struct DualClock: Tweak {
     init() {
         if readPrefs(),
            PreferenceManager.shared.settings.isEnabled {
-            Main().activate()
-            
             if PreferenceManager.shared.settings.lockScreen.isEnabled, !Dodo().isInstalledAndEnabled {
                 LockScreen().activate()
             }

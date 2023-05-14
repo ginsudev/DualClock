@@ -37,7 +37,7 @@ struct Settings {
 
         // Status bar
         statusBar = .init(
-            isEnabled: true,
+            isEnabled: dict["isEnabledSB"] as? Bool ?? false,
             isEnabledAMPM: dict["isEnabledAMPM"] as? Bool ?? false
         )
         
@@ -72,14 +72,12 @@ struct Settings {
             primaryClockAppearance: .init(
                 nameColor: .init(hex: dict["primaryNameColor"] as? String ?? "FFFFFF"),
                 timeColor: .init(hex: dict["primaryTimeColor"] as? String ?? "FFFFFF"),
-                dateColor: .init(hex: dict["primaryDateColor"] as? String ?? "FFFFFF"),
-                iconName: "house.fill"
+                dateColor: .init(hex: dict["primaryDateColor"] as? String ?? "FFFFFF")
             ),
             secondaryClockAppearance: .init(
                 nameColor: .init(hex: dict["secondaryNameColor"] as? String ?? "FFFFFF"),
                 timeColor: .init(hex: dict["secondaryTimeColor"] as? String ?? "FFFFFF"),
-                dateColor: .init(hex: dict["secondaryDateColor"] as? String ?? "FFFFFF"),
-                iconName: "location.fill"
+                dateColor: .init(hex: dict["secondaryDateColor"] as? String ?? "FFFFFF")
             ),
             timeTemplate: timeTemplate,
             dateTemplate: dateTemplate,

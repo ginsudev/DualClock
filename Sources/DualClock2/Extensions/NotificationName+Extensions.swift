@@ -10,4 +10,6 @@ import Foundation
 extension Notification.Name {
     // Refresh
     static let refreshContent = Notification.Name("DualClock.RefreshContent")
+    
+    static let prepended = Notification.Name("DualClock.Prepended")
 }

@@ -4,7 +4,7 @@ ARCHS = arm64 arm64e
 THEOS_DEVICE_IP = localhost -p 2222
 INSTALL_TARGET_PROCESSES = SpringBoard
 TARGET = iphone:clang:16.4:14.5
-PACKAGE_VERSION = 2.0.0
+PACKAGE_VERSION = 2.0.1
 
 # Rootless / Rootful settings
 ifeq ($(ROOTLESS),1)
