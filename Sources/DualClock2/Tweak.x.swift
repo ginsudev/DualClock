@@ -35,7 +35,7 @@ class SBFLockScreenDateView: ClassHook<UIView> {
     func didAddSubview(_ subview: UIView) {
         orig.didAddSubview(subview)
         
-        if (subview == Ivars<UIView>(target)._timeLabel || (subview == Ivars<UIView>(target)._dateSubtitleView)) {
+        if (subview == Ivars<UIView>(target)._timeLabel || (subview == Ivars<UIView>(target)._dateSubtitleView && !PreferenceManager.shared.settings.lockScreen.isSingleDate)) {
             subview.removeFromSuperview()
         }
     }

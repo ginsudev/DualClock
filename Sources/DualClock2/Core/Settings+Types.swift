@@ -24,6 +24,7 @@ extension Settings {
         let selectedFont: FontType
         let secondsColor: UIColor
         let verticalOffset: Double
+        let isSingleDate: Bool
     }
     
     struct ClockAppearance {

@@ -41,7 +41,8 @@ final class PreferenceStorage: ObservableObject {
     @Published(key: "showSeconds", registry: registry) var showSeconds = false
     @Published(key: "selectedFont", registry: registry) var selectedFont = 2
     @Published(key: "verticalOffset", registry: registry) var verticalOffset = 0.0
-    
+    @Published(key: "isSingleDate", registry: registry) var isSingleDate = false
+
     // Color
     @Published(key: "secondsColor", registry: registry) var secondsColor = "FFFFFF"
     // Primary

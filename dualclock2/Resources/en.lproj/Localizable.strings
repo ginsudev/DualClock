@@ -45,3 +45,5 @@
 "SETUP_CLOCKS" = "Setup the visible clocks";
 "CONFIGURE_LS" = "Configure the lock screen clocks";
 "CONFIGURE_SB" = "Configure the status bar clocks";
+"SINGLE_DATE" = "Single date";
+"SINGLE_DATE_DESC" = "Show original system date, instead of two dates.";

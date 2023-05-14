@@ -48,6 +48,10 @@ enum Copy {
     static let setupClocks = "SETUP_CLOCKS".localize(bundle: .dualClock)
     static let configureLS = "CONFIGURE_LS".localize(bundle: .dualClock)
     static let configureSB = "CONFIGURE_SB".localize(bundle: .dualClock)
+    static let singleDate = "SINGLE_DATE".localize(bundle: .dualClock)
+    static let singleDateDesc = "SINGLE_DATE_DESC".localize(bundle: .dualClock)
+    
+    
     
     static func color(_ string: String) -> String {
         String(

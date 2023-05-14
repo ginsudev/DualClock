@@ -14,9 +14,9 @@ extension TimeView {
         @Published private(set) var iconName = ""
         @Published private(set) var nameString: String
         
+        let settings = PreferenceManager.shared.settings.lockScreen
         let appearance: Settings.ClockAppearance
         private let name: String?
-        private let settings = PreferenceManager.shared.settings.lockScreen
         
         init(
             name: String?,

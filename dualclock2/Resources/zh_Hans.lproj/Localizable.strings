@@ -46,3 +46,5 @@
 "CONFIGURE_LS" = "调整锁屏上时间";
 "CONFIGURE_SB" = "调整状态栏里的时间";
 "ADAPTIVE" = "适应";
+"SINGLE_DATE" = "单独日期";
+"SINGLE_DATE_DESC" = "显示原本系统日期、而非两个日期。";

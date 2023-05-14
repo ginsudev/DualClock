@@ -70,10 +70,13 @@ private extension TimeView {
             .foregroundColor(Color(timeColor))
     }
     
+    @ViewBuilder
     var dateView: some View {
-        Text(viewModel.dateString)
-            .font(.system(.body, design: fontDesign))
-            .foregroundColor(Color(dateColor))
+        if !viewModel.settings.isSingleDate {
+            Text(viewModel.dateString)
+                .font(.system(.body, design: fontDesign))
+                .foregroundColor(Color(dateColor))
+        }
     }
     
     func titleView(isVisibleName: Bool) -> some View {

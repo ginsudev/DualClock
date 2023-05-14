@@ -35,8 +35,17 @@ struct LockScreenView: View {
 private extension LockScreenView {
     @ViewBuilder
     var options: some View {
+        Section {
+            Toggle(Copy.singleDate, isOn: $preferenceStorage.isSingleDate)
+        } footer: {
+            Text(Copy.singleDateDesc)
+        }
+        
         timeFormattingSection
-        dateFormattingSection
+        
+        if !preferenceStorage.isSingleDate {
+            dateFormattingSection
+        }
         
         Section {
             Toggle(Copy.showSeconds, isOn: $preferenceStorage.showSeconds.animation())

@@ -29,7 +29,7 @@ private extension RootView {
         HeaderView(
             viewModel: .init(
                 title: "DualClock 2",
-                version: "2.0.0",
+                version: "2.0.1",
                 author: .ginsu
             )
         )

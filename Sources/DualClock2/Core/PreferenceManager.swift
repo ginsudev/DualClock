@@ -84,7 +84,8 @@ struct Settings {
             showSeconds: dict["showSeconds"] as? Bool ?? false,
             selectedFont: FontType(rawValue: dict["selectedFont"] as? Int ?? 2)!,
             secondsColor: UIColor(hex: dict["secondsColor"] as? String ?? "FFFFFF"),
-            verticalOffset: dict["verticalOffset"] as? Double ?? 0.0
+            verticalOffset: dict["verticalOffset"] as? Double ?? 0.0,
+            isSingleDate: dict["isSingleDate"] as? Bool ?? false
         )
         
         // Primary clock
