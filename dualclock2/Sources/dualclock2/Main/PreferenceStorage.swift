@@ -18,7 +18,7 @@ final class PreferenceStorage: ObservableObject {
     /// to `Codable` (i.e. `String, Data, Int, Bool, Double, Float`, etc).
 
     // Preferences
-    @Published(key: "isEnabledTweak", registry: registry) var isEnabled = true
+    @Published(key: "isEnabled", registry: registry) var isEnabled = true
     
     // MARK: - Clocks
     // Primary
