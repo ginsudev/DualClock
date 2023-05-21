@@ -25,3 +25,9 @@ DualClock2_CFLAGS = -fobjc-arc -ISources/DualClock2C/include
 include $(THEOS_MAKE_PATH)/tweak.mk
 SUBPROJECTS += dualclock2
 include $(THEOS_MAKE_PATH)/aggregate.mk
+
+before-package::
+	# Append values to control file
+	$(ECHO_NOTHING)sed -i '' \
+		-e 's/\$${PKG_NAME_SUFFIX}/$(PKG_NAME_SUFFIX)/g' \
+		$(THEOS_STAGING_DIR)/DEBIAN/control$(ECHO_END)

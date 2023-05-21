@@ -1,5 +1,5 @@
 Package: com.ginsu.dualclock2
-Name: DualClock 2
+Name: DualClock 2 ${PKG_NAME_SUFFIX}
 Version: 0.0.1
 Architecture: iphoneos-arm
 Description: Two time zones on the Lock Screen!
